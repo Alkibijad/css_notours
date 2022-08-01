@@ -1,0 +1,285 @@
+.section-features {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)),
+    url(../../img/nat-4.jpg);
+  clip-path: polygon(0 30%, 100% 0, 100% 70%, 0 100%);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+
+  .column-4 {
+    padding: 5px;
+
+    .col-1-of-4 {
+      width: 100%;
+      height: 40rem;
+      background-color: rgba($White, 0.65);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 1rem;
+
+      i {
+        font-size: 5rem;
+        color: $Dark-green;
+      }
+
+      h4 {
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      &:hover {
+        transform: translateY(-3rem) scale(1.03);
+        transition: 0.5s;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.section-popular-tours {
+  .col-1-of-3 {
+    width: 35rem;
+    height: 50rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0);
+
+
+
+    &:hover .face.front {
+      transform: perspective(1000px) rotateY(180deg);
+    }
+
+    &:hover .face.back {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+
+    .face {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-style: preserve-3d;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 2s ease-in-out;
+      backface-visibility: hidden;
+      box-shadow: 0 10px 10px 0px;
+
+
+      &.front {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+        .tours-header {
+          width: 100%;
+          height: 50%;
+          position: relative;
+
+          &-image {
+            width: 100%;
+            height: 100%;
+          }
+
+          .image-header {
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+
+            P {
+              color: white;
+              text-transform: uppercase;
+              font-size: 3rem;
+              padding: 0.5rem 1rem;
+            }
+          }
+
+          .header-card--1 {
+            p {
+              background: $Card-one-orange;
+            }
+          }
+
+          .header-card--2 {
+            p {
+              background: $Card-two-green;
+            }
+          }
+
+          .header-card--3 {
+            p {
+              background: $Card-three-blue;
+            }
+          }
+
+          .image-bg {
+            background-position: center;
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+          }
+
+          .image-1 {
+            background-image: $Card-one-orange , url(../img/nat-5.jpg);
+          }
+
+          .image-2 {
+            background-image: $Card-two-green , url(../img/nat-6.jpg);
+          }
+
+          .image-3 {
+            background-image: $Card-three-blue , url(../img/nat-7.jpg);
+          }
+        }
+
+        .tours-content {
+          width: 100%;
+          height: 50%;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          p {
+            padding: .5rem;
+          }
+        }
+      }
+
+      &.back {
+        transform: perspective(500px) rotateY(180deg);
+
+        &.back-card--1 {
+          background: $Card-one-orange;
+
+        }
+
+        &.back-card--2 {
+          background: $Card-two-green;
+
+        }
+
+        &.back-card--3 {
+          background: $Card-three-blue;
+
+        }
+
+        .back-content {
+
+          width: 80%;
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .head,
+          .price {
+            font-size: 3.5rem;
+            color: rgba($White, 0.65);
+          }
+        }
+      }
+
+      & h2 {
+        text-transform: uppercase;
+        color: black;
+        transform: perspective(500px) translateZ(100px);
+      }
+    }
+  }
+}
+
+.section-stories {
+  width: 100%;
+  height: 98vh;
+  position: relative;
+
+  .section-stories__content {
+  
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .storie-cards {
+      width: 40%;
+      height: 80%;
+
+      .storie-card {
+        clip-path: polygon(8% 0, 100% 1%, 92% 100%, 0% 100%);
+        background-color: rgba(250, 250, 250, 0.561);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+
+        .image-box {
+          width: 40%;
+          height: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            min-width: 100px;
+            max-width: 200px;
+            border-radius: 50%;
+          }
+        }
+
+        .storie-card__text {
+          width: 50%;
+          text-align: center;
+          color: $color-grey-light-3;
+          font-size: 2rem;
+
+        }
+      }
+
+      .read-more-stories {
+        text-align: center;
+
+        button {
+          background-color: transparent;
+          border: none;
+          color: $Dark-green;
+          font-size: 2.5rem;
+          font-weight: 500;
+        }
+
+      }
+
+    }
+
+    @media only screen and (max-width: 1175px) {
+      .storie-cards {
+        width: 90%;
+      }
+    }
+
+
+  }
+
+
+}
